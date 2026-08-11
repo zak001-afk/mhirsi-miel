@@ -7,7 +7,9 @@
       name="description"
       content="Mhirsi Miel delivers premium Tunisian honey with a modern dark brand style and handcrafted quality."
     />
+    <meta name="theme-color" content="#090b10" />
     <title>Mhirsi Miel - Premium Honey</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,12 +37,27 @@
         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
 
-      <div class="language-switcher">
-        <label for="language-select" class="visually-hidden">Language</label>
-        <select id="language-select" aria-label="Language selector">
-          <option value="en">English</option>
-          <option value="fr">Français</option>
-        </select>
+      <div
+        class="language-switcher"
+        role="tablist"
+        aria-label="Language selector"
+      >
+        <button
+          type="button"
+          class="lang-btn active"
+          data-lang="en"
+          aria-pressed="true"
+        >
+          EN
+        </button>
+        <button
+          type="button"
+          class="lang-btn"
+          data-lang="fr"
+          aria-pressed="false"
+        >
+          FR
+        </button>
       </div>
     </nav>
 
@@ -55,20 +72,50 @@
             Golden honey harvested with care, grown in Nabeul, and styled for
             discerning tastes.
           </p>
-          <a class="btn" href="#products" data-i18n="hero.button"
-            >Shop the collection</a
-          >
+          <div class="hero-actions">
+            <a class="btn" href="#products" data-i18n="hero.button"
+              >Shop the collection</a
+            >
+            <a class="btn btn-secondary" href="#about" data-i18n="hero.learn"
+              >Learn more</a
+            >
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <strong>100%</strong>
+              <span>Natural</span>
+            </div>
+            <div class="metric-card">
+              <strong>4.9/5</strong>
+              <span>Rated quality</span>
+            </div>
+            <div class="metric-card">
+              <strong>24h</strong>
+              <span>Fast support</span>
+            </div>
+          </div>
         </div>
       </section>
 
       <section id="about" class="section-block">
-        <div class="section-inner">
-          <h2 data-i18n="about.title">About Mhirsi Miel</h2>
-          <p data-i18n="about.description">
-            We produce 100% natural honey using traditional beekeeping
-            techniques. Every jar is carefully selected for rich aroma, clean
-            texture, and exceptional flavor.
-          </p>
+        <div class="section-inner about-grid">
+          <div>
+            <h2 data-i18n="about.title">About Mhirsi Miel</h2>
+            <p data-i18n="about.description">
+              We produce 100% natural honey using traditional beekeeping
+              techniques. Every jar is carefully selected for rich aroma, clean
+              texture, and exceptional flavor.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <p class="quote-mark">“</p>
+            <p>
+              Crafted in small batches, inspired by Tunisian landscapes and
+              timeless tradition.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -119,6 +166,7 @@
                 </li>
               </ul>
             </article>
+
             <article class="product-card">
               <img
                 src="images/honey-1.jpg"
@@ -153,14 +201,14 @@
                 <a href="tel:+21623797050">+216 23 797 050</a>
               </p>
             </div>
-            <form class="contact-form" action="#" method="post">
+
+            <form class="contact-form">
               <label for="name" data-i18n="contact.form.nameLabel">Name</label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 placeholder="Your name"
-                data-i18n-placeholder="contact.form.namePlaceholder"
               />
 
               <label for="email" data-i18n="contact.form.emailLabel"
@@ -171,7 +219,6 @@
                 id="email"
                 name="email"
                 placeholder="Your email"
-                data-i18n-placeholder="contact.form.emailPlaceholder"
               />
 
               <label for="message" data-i18n="contact.form.messageLabel"
@@ -182,7 +229,6 @@
                 name="message"
                 rows="5"
                 placeholder="How can we help?"
-                data-i18n-placeholder="contact.form.messagePlaceholder"
               ></textarea>
 
               <button type="submit" class="btn" data-i18n="contact.form.button">
@@ -196,7 +242,7 @@
 
     <footer class="site-footer">
       <p data-i18n="footer">
-        &copy; 2026 Mhirsi Miel. Crafted with care in Tunisia.
+        © 2026 Mhirsi Miel. Crafted with care in Tunisia.
       </p>
     </footer>
 
@@ -221,6 +267,7 @@
             description:
               "Golden honey harvested with care, grown in Nabeul, and styled for discerning tastes.",
             button: "Shop the collection",
+            learn: "Learn more",
           },
           about: {
             title: "About Mhirsi Miel",
@@ -265,9 +312,6 @@
               nameLabel: "Name",
               emailLabel: "Email",
               messageLabel: "Message",
-              namePlaceholder: "Your name",
-              emailPlaceholder: "Your email",
-              messagePlaceholder: "How can we help?",
               button: "Send message",
             },
           },
@@ -292,6 +336,7 @@
             description:
               "Miel doré récolté avec soin, cultivé à Nabeul et conçu pour les palais exigeants.",
             button: "Voir la collection",
+            learn: "En savoir plus",
           },
           about: {
             title: "À propos de Mhirsi Miel",
@@ -336,9 +381,6 @@
               nameLabel: "Nom",
               emailLabel: "Email",
               messageLabel: "Message",
-              namePlaceholder: "Votre nom",
-              emailPlaceholder: "Votre email",
-              messagePlaceholder: "Comment pouvons-nous aider ?",
               button: "Envoyer",
             },
           },
@@ -348,9 +390,6 @@
 
       const switcher = document.getElementById("language-select");
       const i18nElements = document.querySelectorAll("[data-i18n]");
-      const placeholderElements = document.querySelectorAll(
-        "[data-i18n-placeholder]",
-      );
 
       function translatePage(lang) {
         i18nElements.forEach((el) => {
@@ -358,22 +397,11 @@
           const value = key
             .split(".")
             .reduce((obj, part) => obj?.[part], translations[lang]);
-          if (value !== undefined) el.textContent = value;
-        });
-
-        placeholderElements.forEach((el) => {
-          const key = el.dataset.i18nPlaceholder;
-          const value = key
-            .split(".")
-            .reduce((obj, part) => obj?.[part], translations[lang]);
-          if (value !== undefined) el.placeholder = value;
+          if (value) el.textContent = value;
         });
       }
 
-      switcher.addEventListener("change", (event) => {
-        translatePage(event.target.value);
-      });
-
+      switcher.addEventListener("change", (e) => translatePage(e.target.value));
       translatePage("en");
     </script>
   </body>
