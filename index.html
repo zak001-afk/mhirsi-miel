@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mhirsi Miel delivers premium Tunisian honey with a modern dark brand style and handcrafted quality."
+    />
+    <title>Mhirsi Miel - Premium Honey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <p class="eyebrow" data-i18n="header.brand">Mhirsi Miel</p>
+        <h1 data-i18n="header.title">Pure honey from Tunisia</h1>
+        <p class="intro" data-i18n="header.subtitle">
+          Natural, small-batch honey with rich flavor and premium presentation.
+        </p>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#features" data-i18n="nav.features">Why Us</a></li>
+        <li><a href="#products" data-i18n="nav.products">Products</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <div class="language-switcher">
+        <label for="language-select" class="visually-hidden">Language</label>
+        <select id="language-select" aria-label="Language selector">
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+    </nav>
+
+    <main>
+      <section id="hero" class="hero-section">
+        <div class="hero-copy">
+          <span data-i18n="hero.label">Modern honey brand</span>
+          <h2 data-i18n="hero.title">
+            Discover premium Tunisian honey with a modern edge
+          </h2>
+          <p data-i18n="hero.description">
+            Golden honey harvested with care, grown in Nabeul, and styled for
+            discerning tastes.
+          </p>
+          <a class="btn" href="#products" data-i18n="hero.button"
+            >Shop the collection</a
+          >
+        </div>
+      </section>
+
+      <section id="about" class="section-block">
+        <div class="section-inner">
+          <h2 data-i18n="about.title">About Mhirsi Miel</h2>
+          <p data-i18n="about.description">
+            We produce 100% natural honey using traditional beekeeping
+            techniques. Every jar is carefully selected for rich aroma, clean
+            texture, and exceptional flavor.
+          </p>
+        </div>
+      </section>
+
+      <section id="features" class="section-block">
+        <div class="section-inner">
+          <h2 data-i18n="features.title">Why choose us</h2>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3 data-i18n="features.card1.title">100% Natural</h3>
+              <p data-i18n="features.card1.text">
+                Pure honey with no additives, preservatives, or artificial
+                flavor.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3 data-i18n="features.card2.title">Small batch</h3>
+              <p data-i18n="features.card2.text">
+                Handcrafted batches for quality, consistency, and freshness.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3 data-i18n="features.card3.title">Fast support</h3>
+              <p data-i18n="features.card3.text">
+                Local customer care and quick responses for every order.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="section-block">
+        <div class="section-inner">
+          <h2 data-i18n="products.title">Our Honey</h2>
+          <div class="product-grid">
+            <article class="product-card">
+              <img
+                src="images/honey-2.webp"
+                alt="Jar of wildflower honey on a dark background"
+              />
+              <h3 data-i18n="products.card1.title">Wildflower Honey</h3>
+              <p data-i18n="products.card1.text">
+                Rich, floral flavor with a smooth finish.
+              </p>
+              <ul>
+                <li data-i18n="products.card1.feature1">250 g jar</li>
+                <li data-i18n="products.card1.feature2">
+                  Ideal for tea, toast, and desserts
+                </li>
+              </ul>
+            </article>
+            <article class="product-card">
+              <img
+                src="images/honey-1.jpg"
+                alt="Jar of thyme honey with a wooden honey dipper"
+              />
+              <h3 data-i18n="products.card2.title">Thyme Honey</h3>
+              <p data-i18n="products.card2.text">
+                Herbal notes and deep aroma for a refined palette.
+              </p>
+              <ul>
+                <li data-i18n="products.card2.feature1">250 g jar</li>
+                <li data-i18n="products.card2.feature2">
+                  Perfect with cheese, yogurt, and pastries
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-block">
+        <div class="section-inner">
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h2 data-i18n="contact.title">Contact Us</h2>
+              <p>
+                <span data-i18n="contact.emailLabel">Email:</span>
+                <a href="mailto:Mhirsimiel@gmail.com">Mhirsimiel@gmail.com</a>
+              </p>
+              <p>
+                <span data-i18n="contact.phoneLabel">Phone:</span>
+                <a href="tel:+21623797050">+216 23 797 050</a>
+              </p>
+            </div>
+            <form class="contact-form" action="#" method="post">
+              <label for="name" data-i18n="contact.form.nameLabel">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                data-i18n-placeholder="contact.form.namePlaceholder"
+              />
+
+              <label for="email" data-i18n="contact.form.emailLabel"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your email"
+                data-i18n-placeholder="contact.form.emailPlaceholder"
+              />
+
+              <label for="message" data-i18n="contact.form.messageLabel"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="How can we help?"
+                data-i18n-placeholder="contact.form.messagePlaceholder"
+              ></textarea>
+
+              <button type="submit" class="btn" data-i18n="contact.form.button">
+                Send message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p data-i18n="footer">
+        &copy; 2026 Mhirsi Miel. Crafted with care in Tunisia.
+      </p>
+    </footer>
+
+    <script>
+      const translations = {
+        en: {
+          nav: {
+            about: "About",
+            features: "Why Us",
+            products: "Products",
+            contact: "Contact",
+          },
+          header: {
+            brand: "Mhirsi Miel",
+            title: "Pure honey from Tunisia",
+            subtitle:
+              "Natural, small-batch honey with rich flavor and premium presentation.",
+          },
+          hero: {
+            label: "Modern honey brand",
+            title: "Discover premium Tunisian honey with a modern edge",
+            description:
+              "Golden honey harvested with care, grown in Nabeul, and styled for discerning tastes.",
+            button: "Shop the collection",
+          },
+          about: {
+            title: "About Mhirsi Miel",
+            description:
+              "We produce 100% natural honey using traditional beekeeping techniques. Every jar is carefully selected for rich aroma, clean texture, and exceptional flavor.",
+          },
+          features: {
+            title: "Why choose us",
+            card1: {
+              title: "100% Natural",
+              text: "Pure honey with no additives, preservatives, or artificial flavor.",
+            },
+            card2: {
+              title: "Small batch",
+              text: "Handcrafted batches for quality, consistency, and freshness.",
+            },
+            card3: {
+              title: "Fast support",
+              text: "Local customer care and quick responses for every order.",
+            },
+          },
+          products: {
+            title: "Our Honey",
+            card1: {
+              title: "Wildflower Honey",
+              text: "Rich, floral flavor with a smooth finish.",
+              feature1: "250 g jar",
+              feature2: "Ideal for tea, toast, and desserts",
+            },
+            card2: {
+              title: "Thyme Honey",
+              text: "Herbal notes and deep aroma for a refined palette.",
+              feature1: "250 g jar",
+              feature2: "Perfect with cheese, yogurt, and pastries",
+            },
+          },
+          contact: {
+            title: "Contact Us",
+            emailLabel: "Email:",
+            phoneLabel: "Phone:",
+            form: {
+              nameLabel: "Name",
+              emailLabel: "Email",
+              messageLabel: "Message",
+              namePlaceholder: "Your name",
+              emailPlaceholder: "Your email",
+              messagePlaceholder: "How can we help?",
+              button: "Send message",
+            },
+          },
+          footer: "© 2026 Mhirsi Miel. Crafted with care in Tunisia.",
+        },
+        fr: {
+          nav: {
+            about: "À propos",
+            features: "Pourquoi nous",
+            products: "Produits",
+            contact: "Contact",
+          },
+          header: {
+            brand: "Mhirsi Miel",
+            title: "Miel pur de Tunisie",
+            subtitle:
+              "Miel naturel et artisanal avec une présentation premium.",
+          },
+          hero: {
+            label: "Marque de miel moderne",
+            title: "Découvrez le miel tunisien premium au style moderne",
+            description:
+              "Miel doré récolté avec soin, cultivé à Nabeul et conçu pour les palais exigeants.",
+            button: "Voir la collection",
+          },
+          about: {
+            title: "À propos de Mhirsi Miel",
+            description:
+              "Nous produisons du miel 100% naturel en utilisant des techniques apicoles traditionnelles. Chaque pot est soigneusement sélectionné pour son arôme riche, sa texture pure et sa saveur exceptionnelle.",
+          },
+          features: {
+            title: "Pourquoi nous choisir",
+            card1: {
+              title: "100% naturel",
+              text: "Miel pur sans additifs, conservateurs ou arômes artificiels.",
+            },
+            card2: {
+              title: "Petites quantités",
+              text: "Lots artisanaux pour la qualité, la cohérence et la fraîcheur.",
+            },
+            card3: {
+              title: "Support rapide",
+              text: "Service client local et réponses rapides pour chaque commande.",
+            },
+          },
+          products: {
+            title: "Nos miels",
+            card1: {
+              title: "Miel de fleurs sauvages",
+              text: "Saveur riche et florale avec une finition douce.",
+              feature1: "Pot de 250 g",
+              feature2: "Idéal pour le thé, le pain grillé et les desserts",
+            },
+            card2: {
+              title: "Miel de thym",
+              text: "Notes herbacées et arôme profond pour un palais raffiné.",
+              feature1: "Pot de 250 g",
+              feature2: "Parfait avec le fromage, le yaourt et les pâtisseries",
+            },
+          },
+          contact: {
+            title: "Contactez-nous",
+            emailLabel: "Email :",
+            phoneLabel: "Téléphone :",
+            form: {
+              nameLabel: "Nom",
+              emailLabel: "Email",
+              messageLabel: "Message",
+              namePlaceholder: "Votre nom",
+              emailPlaceholder: "Votre email",
+              messagePlaceholder: "Comment pouvons-nous aider ?",
+              button: "Envoyer",
+            },
+          },
+          footer: "© 2026 Mhirsi Miel. Élaboré avec soin en Tunisie.",
+        },
+      };
+
+      const switcher = document.getElementById("language-select");
+      const i18nElements = document.querySelectorAll("[data-i18n]");
+      const placeholderElements = document.querySelectorAll(
+        "[data-i18n-placeholder]",
+      );
+
+      function translatePage(lang) {
+        i18nElements.forEach((el) => {
+          const key = el.dataset.i18n;
+          const value = key
+            .split(".")
+            .reduce((obj, part) => obj?.[part], translations[lang]);
+          if (value !== undefined) el.textContent = value;
+        });
+
+        placeholderElements.forEach((el) => {
+          const key = el.dataset.i18nPlaceholder;
+          const value = key
+            .split(".")
+            .reduce((obj, part) => obj?.[part], translations[lang]);
+          if (value !== undefined) el.placeholder = value;
+        });
+      }
+
+      switcher.addEventListener("change", (event) => {
+        translatePage(event.target.value);
+      });
+
+      translatePage("en");
+    </script>
+  </body>
+</html>
