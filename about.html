@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn about Mhirsi Miel's story and values."
+    />
+    <meta name="theme-color" content="#090b10" />
+    <title>About - Mhirsi Miel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <p class="eyebrow" data-i18n="about.eyebrow">Our Story</p>
+        <h1 data-i18n="about.title">About Mhirsi Miel</h1>
+        <p class="intro" data-i18n="about.intro">
+          Crafted with tradition and care in the heart of Tunisia.
+        </p>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="language-switcher">
+        <label class="sr-only" for="language-select">Language</label>
+        <select id="language-select" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="ar">العربية</option>
+        </select>
+      </div>
+    </nav>
+
+    <main>
+      <section class="section-block">
+        <div class="section-inner about-grid">
+          <div>
+            <h2 data-i18n="about.mission.title">Our Mission</h2>
+            <p data-i18n="about.mission.desc1">
+              We produce 100% natural honey using traditional beekeeping
+              techniques. Every jar is carefully selected for rich aroma, clean
+              texture, and exceptional flavor.
+            </p>
+            <p data-i18n="about.mission.desc2">
+              Founded in Nabeul, Tunisia, Mhirsi Miel brings the richness of
+              Tunisian landscapes into every bottle. We focus on premium
+              quality, natural ingredients, and timeless taste.
+            </p>
+          </div>
+          <div class="about-card">
+            <p class="quote-mark">"</p>
+            <p data-i18n="about.quote">
+              Crafted in small batches, inspired by Tunisian landscapes and
+              timeless tradition.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-inner">
+          <h2 data-i18n="about.different.title">Why We're Different</h2>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3 data-i18n="about.different.card1.title">
+                Traditional Methods
+              </h3>
+              <p data-i18n="about.different.card1.text">
+                We use time-honored beekeeping techniques passed down through
+                generations.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3 data-i18n="about.different.card2.title">Local Sourcing</h3>
+              <p data-i18n="about.different.card2.text">
+                All honey is sourced from our apiaries in the Nabeul region of
+                Tunisia.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3 data-i18n="about.different.card3.title">Quality First</h3>
+              <p data-i18n="about.different.card3.text">
+                Every jar undergoes rigorous testing to ensure premium quality
+                and purity.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p data-i18n="footer">
+        © 2026 Mhirsi Miel. Crafted with care in Tunisia.
+      </p>
+      <div class="social-links">
+        <a
+          href="https://www.facebook.com/Mhirsimiel"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/mhirsimielofficiel/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      const translations = {
+        en: {
+          nav: {
+            home: "Home",
+            about: "About",
+            products: "Products",
+            contact: "Contact",
+          },
+          about: {
+            eyebrow: "Our Story",
+            title: "About Mhirsi Miel",
+            intro: "Crafted with tradition and care in the heart of Tunisia.",
+            mission: {
+              title: "Our Mission",
+              desc1:
+                "We produce 100% natural honey using traditional beekeeping techniques. Every jar is carefully selected for rich aroma, clean texture, and exceptional flavor.",
+              desc2:
+                "Founded in Nabeul, Tunisia, Mhirsi Miel brings the richness of Tunisian landscapes into every bottle. We focus on premium quality, natural ingredients, and timeless taste.",
+            },
+            quote:
+              "Crafted in small batches, inspired by Tunisian landscapes and timeless tradition.",
+            different: {
+              title: "Why We're Different",
+              card1: {
+                title: "Traditional Methods",
+                text: "We use time-honored beekeeping techniques passed down through generations.",
+              },
+              card2: {
+                title: "Local Sourcing",
+                text: "All honey is sourced from our apiaries in different regions of Tunisia.",
+              },
+              card3: {
+                title: "Quality First",
+                text: "Every jar undergoes rigorous testing to ensure premium quality and purity.",
+              },
+            },
+          },
+          footer: "© 2026 Mhirsi Miel. Crafted with care in Tunisia.",
+        },
+        fr: {
+          nav: {
+            home: "Accueil",
+            about: "À propos",
+            products: "Produits",
+            contact: "Contact",
+          },
+          about: {
+            eyebrow: "Notre histoire",
+            title: "À propos de Mhirsi Miel",
+            intro: "Élaboré avec tradition et soin au cœur de la Tunisie.",
+            mission: {
+              title: "Notre mission",
+              desc1:
+                "Nous produisons du miel 100% naturel en utilisant des techniques apicoles traditionnelles. Chaque pot est soigneusement sélectionné pour son arôme riche, sa texture pure et sa saveur exceptionnelle.",
+              desc2:
+                "Fondée à Nabeul, en Tunisie, Mhirsi Miel apporte la richesse des paysages tunisiens dans chaque bouteille. Nous nous concentrons sur la qualité premium, les ingrédients naturels et le goût intemporel.",
+            },
+            quote:
+              "Élaboré en petits lots, inspiré par les paysages tunisiens et la tradition intemporelle.",
+            different: {
+              title: "Pourquoi nous sommes différents",
+              card1: {
+                title: "Méthodes traditionnelles",
+                text: "Nous utilisons des techniques apicoles séculaires transmises de génération en génération.",
+              },
+              card2: {
+                title: "Approvisionnement local",
+                text: "Tout le miel provient de nos ruchers dans la région de Nabeul en Tunisie.",
+              },
+              card3: {
+                title: "Qualité d'abord",
+                text: "Chaque pot subit des tests rigoureux pour garantir une qualité et une pureté premium.",
+              },
+            },
+          },
+          footer: "© 2026 Mhirsi Miel. Élaboré avec soin en Tunisie.",
+        },
+        ar: {
+          nav: {
+            home: "الرئيسية",
+            about: "حول",
+            products: "المنتجات",
+            contact: "اتصل بنا",
+          },
+          about: {
+            eyebrow: "قصتنا",
+            title: "حول Mhirsi Miel",
+            intro: "مصنوع بتقليد وعناية في قلب تونس.",
+            mission: {
+              title: "مهمتنا",
+              desc1:
+                "ننتج عسل 100% طبيعي باستخدام تقنيات تربية النحل التقليدية. يتم اختيار كل برطمان بعناية لرائحته الغنية وملمسه النقي وطعمه الاستثنائي.",
+              desc2:
+                "تأسست في نابل بتونس، تحضر Mhirsi Miel ثروة المناظر الطبيعية التونسية إلى كل زجاجة. نركز على الجودة العالية والمكونات الطبيعية والطعم الخالد.",
+            },
+            quote:
+              "مصنوع بكميات صغيرة، مستوحى من المناظر الطبيعية التونسية والتقليد الخالد.",
+            different: {
+              title: "لماذا نحن مختلفون",
+              card1: {
+                title: "الطرق التقليدية",
+                text: "نستخدم تقنيات تربية النحل العريقة التي تنتقل من جيل إلى جيل.",
+              },
+              card2: {
+                title: "المصادر المحلية",
+                text: "كل العسل يأتي من مناحلنا في منطقة نابل بتونس.",
+              },
+              card3: {
+                title: "الجودة أولاً",
+                text: "كل برطمان يخضع لاختبارات صارمة لضمان جودة وطهارة عالية.",
+              },
+            },
+          },
+          footer: "© 2026 Mhirsi Miel. مصنوع بعناية في تونس.",
+        },
+      };
+
+      const languageSelect = document.getElementById("language-select");
+      const i18nElements = document.querySelectorAll("[data-i18n]");
+
+      function translatePage(lang) {
+        i18nElements.forEach((el) => {
+          const key = el.dataset.i18n;
+          const value = key
+            .split(".")
+            .reduce((obj, part) => obj?.[part], translations[lang]);
+          if (value) el.textContent = value;
+        });
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+      }
+
+      languageSelect.addEventListener("change", (e) =>
+        translatePage(e.target.value),
+      );
+      translatePage("en");
+    </script>
+  </body>
+</html>

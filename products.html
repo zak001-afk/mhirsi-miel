@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore our premium honey collection." />
+    <meta name="theme-color" content="#090b10" />
+    <title>Products - Mhirsi Miel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <p class="eyebrow" data-i18n="products.eyebrow">Our Collection</p>
+        <h1 data-i18n="products.title">Premium Honey</h1>
+        <p class="intro" data-i18n="products.intro">
+          Discover two signature flavors made to stand out.
+        </p>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="language-switcher">
+        <label class="sr-only" for="language-select">Language</label>
+        <select id="language-select" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="ar">العربية</option>
+        </select>
+      </div>
+    </nav>
+
+    <main>
+      <section class="section-block">
+        <div class="section-inner">
+          <div class="product-grid">
+            <article class="product-card">
+              <img src="images/honey-2.jpg" alt="Jar of wildflower honey" />
+              <h3 data-i18n="products.card1.title">Wildflower Honey</h3>
+              <p data-i18n="products.card1.text">
+                Rich, floral flavor with a smooth finish.
+              </p>
+              <ul>
+                <li data-i18n="products.card1.feature1">1 Kg jar</li>
+                <li data-i18n="products.card1.feature2">
+                  Ideal for tea, toast, and desserts
+                </li>
+              </ul>
+            </article>
+
+            <article class="product-card">
+              <img src="images/honey-1.jpg" alt="Jar of thyme honey" />
+              <h3 data-i18n="products.card2.title">Thyme Honey</h3>
+              <p data-i18n="products.card2.text">
+                Herbal notes and deep aroma for a refined palette.
+              </p>
+              <ul>
+                <li data-i18n="products.card2.feature1">1 Kg jar</li>
+                <li data-i18n="products.card2.feature2">
+                  Perfect with cheese, yogurt, and pastries
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p data-i18n="footer">
+        © 2026 Mhirsi Miel. Crafted with care in Tunisia.
+      </p>
+      <div class="social-links">
+        <a
+          href="https://www.facebook.com/Mhirsimiel"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/mhirsimielofficiel/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      const translations = {
+        en: {
+          nav: {
+            home: "Home",
+            about: "About",
+            products: "Products",
+            contact: "Contact",
+          },
+          products: {
+            eyebrow: "Our Collection",
+            title: "Premium Honey",
+            intro: "Discover two signature flavors made to stand out.",
+            card1: {
+              title: "Wildflower Honey",
+              text: "Rich, floral flavor with a smooth finish.",
+              feature1: "1 Kg jar",
+              feature2: "Ideal for tea, toast, and desserts",
+            },
+            card2: {
+              title: "Thyme Honey",
+              text: "Herbal notes and deep aroma for a refined palette.",
+              feature1: "1 Kg jar",
+              feature2: "Perfect with cheese, yogurt, and pastries",
+            },
+          },
+          footer: "© 2026 Mhirsi Miel. Crafted with care in Tunisia.",
+        },
+        fr: {
+          nav: {
+            home: "Accueil",
+            about: "À propos",
+            products: "Produits",
+            contact: "Contact",
+          },
+          products: {
+            eyebrow: "Notre collection",
+            title: "Miel premium",
+            intro:
+              "Découvrez deux saveurs signature conçues pour se démarquer.",
+            card1: {
+              title: "Miel de fleurs sauvages",
+              text: "Saveur florale riche avec une finition douce.",
+              feature1: "Pot de 1 kg",
+              feature2: "Idéal pour le thé, le pain grillé et les desserts",
+            },
+            card2: {
+              title: "Miel de thym",
+              text: "Notes herbacées et arôme profond pour un palais raffiné.",
+              feature1: "Pot de 1 kg",
+              feature2: "Parfait avec le fromage, le yaourt et les pâtisseries",
+            },
+          },
+          footer: "© 2026 Mhirsi Miel. Élaboré avec soin en Tunisie.",
+        },
+        ar: {
+          nav: {
+            home: "الرئيسية",
+            about: "حول",
+            products: "المنتجات",
+            contact: "اتصل بنا",
+          },
+          products: {
+            eyebrow: "مجموعتنا",
+            title: "عسل فاخر",
+            intro: "اكتشف نكهتين موقعتين مصممتين للتميز.",
+            card1: {
+              title: "عسل زهور برية",
+              text: "نكهة زهرية غنية مع نهاية ناعمة.",
+              feature1: "برطمان 1 كغ",
+              feature2: "مثالي للشاي والخبز المحمص والحلويات",
+            },
+            card2: {
+              title: "عسل الزعتر",
+              text: "نكهات عشبية ورائحة عميقة لذوق راقي.",
+              feature1: "برطمان 1 كغ",
+              feature2: "مثالي مع الجبن والزبادي والمعجنات",
+            },
+          },
+          footer: "© 2026 Mhirsi Miel. مصنوع بعناية في تونس.",
+        },
+      };
+
+      const languageSelect = document.getElementById("language-select");
+      const i18nElements = document.querySelectorAll("[data-i18n]");
+
+      function translatePage(lang) {
+        i18nElements.forEach((el) => {
+          const key = el.dataset.i18n;
+          const value = key
+            .split(".")
+            .reduce((obj, part) => obj?.[part], translations[lang]);
+          if (value) el.textContent = value;
+        });
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+      }
+
+      languageSelect.addEventListener("change", (e) =>
+        translatePage(e.target.value),
+      );
+      translatePage("en");
+    </script>
+  </body>
+</html>

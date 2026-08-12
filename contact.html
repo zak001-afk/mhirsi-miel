@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Get in touch with Mhirsi Miel." />
+    <meta name="theme-color" content="#090b10" />
+    <title>Contact - Mhirsi Miel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <p class="eyebrow" data-i18n="contact.eyebrow">Get in Touch</p>
+        <h1 data-i18n="contact.title">Contact Us</h1>
+        <p class="intro" data-i18n="contact.intro">
+          We'd love to hear from you. Reach out anytime.
+        </p>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="language-switcher">
+        <label class="sr-only" for="language-select">Language</label>
+        <select id="language-select" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="ar">العربية</option>
+        </select>
+      </div>
+    </nav>
+
+    <main>
+      <section class="section-block">
+        <div class="section-inner">
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h2 data-i18n="contact.form.title">Contact Info</h2>
+              <p>
+                <span data-i18n="contact.form.emailLabel">Email:</span>
+                <a href="mailto:Mhirsimiel@gmail.com">Mhirsimiel@gmail.com</a>
+              </p>
+              <p>
+                <span data-i18n="contact.form.phoneLabel">Phone:</span>
+                <a href="tel:+21623797050">+216 23 797 050</a>
+              </p>
+            </div>
+
+            <form class="contact-form" name="contact" method="POST" netlify>
+              <label for="name" data-i18n="contact.form.nameLabel">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+              />
+
+              <label for="email" data-i18n="contact.form.emailInputLabel"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your email"
+                required
+              />
+
+              <label for="message" data-i18n="contact.form.messageLabel"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="How can we help?"
+                required
+              ></textarea>
+
+              <button type="submit" class="btn" data-i18n="contact.form.button">
+                Send message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p data-i18n="footer">
+        © 2026 Mhirsi Miel. Crafted with care in Tunisia.
+      </p>
+      <div class="social-links">
+        <a
+          href="https://www.facebook.com/Mhirsimiel"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/mhirsimielofficiel/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      const translations = {
+        en: {
+          nav: {
+            home: "Home",
+            about: "About",
+            products: "Products",
+            contact: "Contact",
+          },
+          contact: {
+            eyebrow: "Get in Touch",
+            title: "Contact Us",
+            intro: "We'd love to hear from you. Reach out anytime.",
+            form: {
+              title: "Contact Info",
+              nameLabel: "Name",
+              emailLabel: "Email:",
+              emailInputLabel: "Email",
+              phoneLabel: "Phone:",
+              messageLabel: "Message",
+              button: "Send message",
+            },
+          },
+          footer: "© 2026 Mhirsi Miel. Crafted with care in Tunisia.",
+        },
+        fr: {
+          nav: {
+            home: "Accueil",
+            about: "À propos",
+            products: "Produits",
+            contact: "Contact",
+          },
+          contact: {
+            eyebrow: "Entrez en contact",
+            title: "Contactez-nous",
+            intro:
+              "Nous serions ravis de vous entendre. Contactez-nous à tout moment.",
+            form: {
+              title: "Informations de contact",
+              nameLabel: "Nom",
+              emailLabel: "Email :",
+              emailInputLabel: "Email",
+              phoneLabel: "Téléphone :",
+              messageLabel: "Message",
+              button: "Envoyer",
+            },
+          },
+          footer: "© 2026 Mhirsi Miel. Élaboré avec soin en Tunisie.",
+        },
+        ar: {
+          nav: {
+            home: "الرئيسية",
+            about: "حول",
+            products: "المنتجات",
+            contact: "اتصل بنا",
+          },
+          contact: {
+            eyebrow: "تواصل معنا",
+            title: "اتصل بنا",
+            intro: "نود أن نسمع منك. تواصل معنا في أي وقت.",
+            form: {
+              title: "معلومات التواصل",
+              nameLabel: "الاسم",
+              emailLabel: "البريد الإلكتروني:",
+              emailInputLabel: "البريد الإلكتروني",
+              phoneLabel: "الهاتف:",
+              messageLabel: "الرسالة",
+              button: "إرسال",
+            },
+          },
+          footer: "© 2026 Mhirsi Miel. مصنوع بعناية في تونس.",
+        },
+      };
+
+      const languageSelect = document.getElementById("language-select");
+      const i18nElements = document.querySelectorAll("[data-i18n]");
+
+      function translatePage(lang) {
+        i18nElements.forEach((el) => {
+          const key = el.dataset.i18n;
+          const value = key
+            .split(".")
+            .reduce((obj, part) => obj?.[part], translations[lang]);
+          if (value) el.textContent = value;
+        });
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+      }
+
+      languageSelect.addEventListener("change", (e) =>
+        translatePage(e.target.value),
+      );
+      translatePage("en");
+    </script>
+  </body>
+</html>
