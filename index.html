@@ -37,27 +37,13 @@
         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
 
-      <div
-        class="language-switcher"
-        role="tablist"
-        aria-label="Language selector"
-      >
-        <button
-          type="button"
-          class="lang-btn active"
-          data-lang="en"
-          aria-pressed="true"
-        >
-          EN
-        </button>
-        <button
-          type="button"
-          class="lang-btn"
-          data-lang="fr"
-          aria-pressed="false"
-        >
-          FR
-        </button>
+      <div class="language-switcher">
+        <label class="sr-only" for="language-select">Language</label>
+        <select id="language-select" aria-label="Select language">
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="ar">العربية</option>
+        </select>
       </div>
     </nav>
 
@@ -385,6 +371,74 @@
             },
           },
           footer: "© 2026 Mhirsi Miel. Élaboré avec soin en Tunisie.",
+        },
+        ar: {
+          nav: {
+            about: "حول",
+            features: "لماذا نحن",
+            products: "المنتجات",
+            contact: "اتصل بنا",
+          },
+          header: {
+            brand: "Mhirsi Miel",
+            title: "عسل نقي من تونس",
+            subtitle: "عسل طبيعي حرفي بعرض فاخر.",
+          },
+          hero: {
+            label: "ماركة عسل حديثة",
+            title: "اكتشف العسل التونسي الفاخر برؤية حديثة",
+            description:
+              "عسل ذهبي يتم حصاده بعناية في نابل وتصميمه للأذواق الرقيقة.",
+            button: "تسوق المجموعة",
+            learn: "تعرف أكثر",
+          },
+          about: {
+            title: "حول Mhirsi Miel",
+            description:
+              "ننتج عسل 100% طبيعي باستخدام تقنيات تربية النحل التقليدية. يتم اختيار كل برطمان بعناية لرائحته الغنية وملمسه النقي وطعمه الاستثنائي.",
+          },
+          features: {
+            title: "لماذا اختيارنا",
+            card1: {
+              title: "100% طبيعي",
+              text: "عسل نقي بدون إضافات أو نكهات اصطناعية.",
+            },
+            card2: {
+              title: "إنتاج محدود",
+              text: "إنتاج حرفي للجودة والطزاجة والعناية.",
+            },
+            card3: {
+              title: "دعم سريع",
+              text: "فريق منتبه وإجابات سريعة لكل طلب.",
+            },
+          },
+          products: {
+            title: "عسلنا",
+            card1: {
+              title: "عسل زهور برية",
+              text: "نكهة زهرية غنية مع نهاية ناعمة.",
+              feature1: "برطمان 250 جرام",
+              feature2: "مثالي للشاي والخبز المحمص والحلويات",
+            },
+            card2: {
+              title: "عسل الزعتر",
+              text: "نكهات عشبية ورائحة عميقة لذوق راقي.",
+              feature1: "برطمان 250 جرام",
+              feature2: "مثالي مع الجبن والزبادي والمعجنات",
+            },
+          },
+          contact: {
+            title: "تواصل معنا",
+            emailLabel: "البريد الإلكتروني:",
+            phoneLabel: "الهاتف:",
+            form: {
+              nameLabel: "الاسم",
+              emailLabel: "البريد الإلكتروني",
+              messageLabel: "الرسالة",
+              button: "إرسال الرسالة",
+            },
+          },
+          footer: "© 2026 Mhirsi Miel. مصنوع بعناية في تونس.",
         },
       };
 
