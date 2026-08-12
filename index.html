@@ -188,13 +188,14 @@
               </p>
             </div>
 
-            <form class="contact-form">
+            <form class="contact-form" name="contact" method="POST" netlify>
               <label for="name" data-i18n="contact.form.nameLabel">Name</label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 placeholder="Your name"
+                required
               />
 
               <label for="email" data-i18n="contact.form.emailLabel"
@@ -205,6 +206,7 @@
                 id="email"
                 name="email"
                 placeholder="Your email"
+                required
               />
 
               <label for="message" data-i18n="contact.form.messageLabel"
@@ -215,6 +217,7 @@
                 name="message"
                 rows="5"
                 placeholder="How can we help?"
+                required
               ></textarea>
 
               <button type="submit" class="btn" data-i18n="contact.form.button">
