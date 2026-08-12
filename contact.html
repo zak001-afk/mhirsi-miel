@@ -221,5 +221,47 @@
       );
       translatePage("en");
     </script>
+    <script>
+      // Scroll Animation Observer
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("scroll-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Observe all animated elements
+      document
+        .querySelectorAll(
+          ".feature-card, .product-card, .section-inner h2, .section-inner p, .about-grid > div, .about-card",
+        )
+        .forEach((el) => {
+          el.classList.add("scroll-hidden");
+          observer.observe(el);
+        });
+
+      // Page Transition
+      function addTransition() {
+        const transition = document.createElement("div");
+        transition.className = "page-transition";
+        document.body.appendChild(transition);
+      }
+
+      window.addEventListener("beforeunload", addTransition);
+
+      // Fade in on page load
+      window.addEventListener("load", () => {
+        document
+          .querySelectorAll(".page-transition")
+          .forEach((el) => el.remove());
+      });
+    </script>
   </body>
 </html>
