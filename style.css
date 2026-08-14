@@ -185,12 +185,11 @@ select {
   font-size: 0.9rem;
   font-weight: 600;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(248, 184, 0, 0.10),
-      rgba(255, 255, 255, 0.04)
-    );
+  background: linear-gradient(
+    135deg,
+    rgba(248, 184, 0, 0.1),
+    rgba(255, 255, 255, 0.04)
+  );
 
   border: 1px solid var(--border);
   border-radius: 999px;
@@ -206,12 +205,11 @@ select {
 }
 
 .language-trigger:hover {
-  background:
-    linear-gradient(
-      135deg,
-      rgba(248, 184, 0, 0.16),
-      rgba(255, 255, 255, 0.06)
-    );
+  background: linear-gradient(
+    135deg,
+    rgba(248, 184, 0, 0.16),
+    rgba(255, 255, 255, 0.06)
+  );
 
   border-color: rgba(248, 184, 0, 0.4);
 }
@@ -245,14 +243,13 @@ select {
   min-width: 135px;
   padding: 0.4rem;
 
-  background:
-    linear-gradient(
-      145deg,
-      rgba(22, 29, 44, 0.98),
-      rgba(9, 11, 16, 0.98)
-    );
+  background: linear-gradient(
+    145deg,
+    rgba(22, 29, 44, 0.98),
+    rgba(9, 11, 16, 0.98)
+  );
 
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
 
   box-shadow:
@@ -313,7 +310,7 @@ select {
 .language-option:hover,
 .language-option:focus-visible {
   color: var(--accent);
-  background: rgba(248, 184, 0, 0.10);
+  background: rgba(248, 184, 0, 0.1);
   transform: translateX(3px);
   outline: none;
 }
@@ -914,4 +911,74 @@ html[dir="rtl"] .language-option.active:focus-visible {
   background: var(--accent);
   border-color: var(--accent);
   color: #000;
+}
+
+/* =========================================================
+   FINAL ACCESSIBILITY & RESPONSIVE POLISH
+   ========================================================= */
+
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.page-ready .loading-spinner {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    padding: 2.25rem 1rem 1rem;
+  }
+  .site-nav {
+    width: calc(100% - 1rem);
+    margin-left: auto;
+    margin-right: auto;
+    gap: 0.65rem;
+  }
+  .site-nav ul {
+    width: 100%;
+    gap: 0.65rem 1rem;
+  }
+  .site-nav a {
+    font-size: 0.92rem;
+  }
+  .language-switcher {
+    width: 100%;
+    justify-content: center;
+  }
+  .language-trigger {
+    min-width: 140px;
+  }
+  .hero-section {
+    padding: 4rem 1rem 3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
