@@ -1,115 +1,256 @@
+```html
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta
       name="description"
       content="Mhirsi Miel delivers premium Tunisian honey with a modern dark brand style and handcrafted quality."
     />
+
     <meta name="theme-color" content="#090b10" />
+
     <title>Mhirsi Miel - Premium Honey</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div class="loading-spinner">
+    <!-- =========================================================
+       LOADING SPINNER
+       ========================================================= -->
+
+    <div class="loading-spinner" aria-hidden="true">
       <div class="spinner"></div>
     </div>
+
+    <!-- =========================================================
+       HEADER
+       ========================================================= -->
+
     <header class="site-header">
       <div class="header-inner">
-        <p class="eyebrow">Mhirsi Miel</p>
-        <h1>Pure honey from Tunisia</h1>
-        <p class="intro">
+        <p class="eyebrow" data-i18n="header.brand">Mhirsi Miel</p>
+
+        <h1 data-i18n="header.title">Pure honey from Tunisia</h1>
+
+        <p class="intro" data-i18n="header.intro">
           Natural, small-batch honey with rich flavor and premium presentation.
         </p>
       </div>
     </header>
 
+    <!-- =========================================================
+       NAVIGATION
+       ========================================================= -->
+
     <nav class="site-nav" aria-label="Primary navigation">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="index.html" data-i18n="nav.home"> Home </a>
+        </li>
+
+        <li>
+          <a href="about.html" data-i18n="nav.about"> About </a>
+        </li>
+
+        <li>
+          <a href="products.html" data-i18n="nav.products"> Products </a>
+        </li>
+
+        <li>
+          <a href="contact.html" data-i18n="nav.contact"> Contact </a>
+        </li>
       </ul>
+
+      <!-- Language Switcher -->
       <div class="language-switcher">
-        <label class="sr-only" for="language-select">Language</label>
-        <select id="language-select" aria-label="Select language">
-          <option value="en">English</option>
-          <option value="fr">Français</option>
-          <option value="ar">العربية</option>
-        </select>
-      </div>
+  <span class="sr-only">Language</span>
+
+  <select id="language-select" aria-hidden="true" tabindex="-1">
+    <option value="en">English</option>
+    <option value="fr">Français</option>
+    <option value="ar">العربية</option>
+  </select>
+
+  <div class="language-dropdown">
+    <button
+      type="button"
+      class="language-trigger"
+      aria-haspopup="listbox"
+      aria-expanded="false"
+    >
+      <span class="language-current">English</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+
+    <div
+      class="language-menu"
+      role="listbox"
+      aria-label="Select language"
+    >
+      <button
+        type="button"
+        class="language-option active"
+        data-lang="en"
+        role="option"
+        aria-selected="true"
+      >
+        <span class="language-name">English</span>
+      </button>
+
+      <button
+        type="button"
+        class="language-option"
+        data-lang="fr"
+        role="option"
+        aria-selected="false"
+      >
+        <span class="language-name">Français</span>
+      </button>
+
+      <button
+        type="button"
+        class="language-option"
+        data-lang="ar"
+        role="option"
+        aria-selected="false"
+      >
+        <span class="language-name">العربية</span>
+      </button>
+    </div>
+  </div>
+</div>
     </nav>
 
+    <!-- =========================================================
+       MAIN CONTENT
+       ========================================================= -->
+
     <main>
+      <!-- =======================================================
+         HERO
+         ======================================================= -->
+
       <section id="hero" class="hero-section">
         <div class="hero-copy">
-          <span>Modern honey brand</span>
-          <h2>Discover premium Tunisian honey with a modern edge</h2>
-          <p>
+          <span data-i18n="hero.badge"> Modern honey brand </span>
+
+          <h2 data-i18n="hero.title">
+            Discover premium Tunisian honey with a modern edge
+          </h2>
+
+          <p data-i18n="hero.description">
             Golden honey harvested with care, grown in Nabeul, and styled for
             discerning tastes.
           </p>
+
+          <!-- Hero Buttons -->
           <div class="hero-actions">
-            <a class="btn" href="products.html">Shop the collection</a>
-            <a class="btn btn-secondary" href="about.html">Learn more</a>
+            <a class="btn" href="products.html" data-i18n="hero.shop">
+              Shop the collection
+            </a>
+
+            <a
+              class="btn btn-secondary"
+              href="about.html"
+              data-i18n="hero.learn"
+            >
+              Learn more
+            </a>
           </div>
+
+          <!-- Hero Metrics -->
           <div class="hero-metrics">
             <div class="metric-card">
               <strong>100%</strong>
-              <span>Natural</span>
+
+              <span data-i18n="metrics.natural"> Natural </span>
             </div>
+
             <div class="metric-card">
               <strong>4.9/5</strong>
-              <span>Rated quality</span>
+
+              <span data-i18n="metrics.quality"> Rated quality </span>
             </div>
+
             <div class="metric-card">
               <strong>24h</strong>
-              <span>Fast support</span>
+
+              <span data-i18n="metrics.support"> Fast support </span>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- =======================================================
+         FEATURES
+         ======================================================= -->
+
       <section class="section-block">
         <div class="section-inner">
-          <h2>Why choose Mhirsi Miel?</h2>
+          <h2 data-i18n="features.title">Why choose Mhirsi Miel?</h2>
+
           <div class="feature-grid">
+            <!-- Feature 1 -->
             <article class="feature-card">
-              <h3>100% Natural</h3>
-              <p>
+              <h3 data-i18n="features.natural.title">100% Natural</h3>
+
+              <p data-i18n="features.natural.text">
                 Pure honey with no additives, preservatives, or artificial
                 flavor.
               </p>
             </article>
+
+            <!-- Feature 2 -->
             <article class="feature-card">
-              <h3>Small batch</h3>
-              <p>
+              <h3 data-i18n="features.smallBatch.title">Small batch</h3>
+
+              <p data-i18n="features.smallBatch.text">
                 Handcrafted batches for quality, consistency, and freshness.
               </p>
             </article>
+
+            <!-- Feature 3 -->
             <article class="feature-card">
-              <h3>Fast support</h3>
-              <p>Local customer care and quick responses for every order.</p>
+              <h3 data-i18n="features.support.title">Fast support</h3>
+
+              <p data-i18n="features.support.text">
+                Local customer care and quick responses for every order.
+              </p>
             </article>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
     <footer class="site-footer">
-      <p>© 2026 Mhirsi Miel. Crafted with care in Tunisia.</p>
+      <p data-i18n="footer">
+        © 2026 Mhirsi Miel. Crafted with care in Tunisia.
+      </p>
+
       <div class="social-links">
         <a
           href="https://www.facebook.com/Mhirsimiel"
@@ -119,6 +260,7 @@
         >
           <i class="fab fa-facebook"></i>
         </a>
+
         <a
           href="https://www.instagram.com/mhirsimielofficiel/"
           target="_blank"
@@ -130,54 +272,440 @@
       </div>
     </footer>
 
+    <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
+
     <script>
-      const languageSelect = document.getElementById("language-select");
-      languageSelect.addEventListener("change", (e) => {
-        document.documentElement.lang = e.target.value;
-        document.documentElement.dir = e.target.value === "ar" ? "rtl" : "ltr";
-      });
-    </script>
-    <script>
-      // Scroll Animation Observer
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
+      /* =========================================================
+       TRANSLATIONS
+       ========================================================= */
+
+      const translations = {
+        /* -------------------------------------------------------
+         ENGLISH
+         ------------------------------------------------------- */
+
+        en: {
+          nav: {
+            home: "Home",
+            about: "About",
+            products: "Products",
+            contact: "Contact",
+          },
+
+          header: {
+            brand: "Mhirsi Miel",
+            title: "Pure honey from Tunisia",
+            intro:
+              "Natural, small-batch honey with rich flavor and premium presentation.",
+          },
+
+          hero: {
+            badge: "Modern honey brand",
+
+            title: "Discover premium Tunisian honey with a modern edge",
+
+            description:
+              "Golden honey harvested with care, grown in Nabeul, and styled for discerning tastes.",
+
+            shop: "Shop the collection",
+
+            learn: "Learn more",
+          },
+
+          metrics: {
+            natural: "Natural",
+            quality: "Rated quality",
+            support: "Fast support",
+          },
+
+          features: {
+            title: "Why choose Mhirsi Miel?",
+
+            natural: {
+              title: "100% Natural",
+
+              text: "Pure honey with no additives, preservatives, or artificial flavor.",
+            },
+
+            smallBatch: {
+              title: "Small batch",
+
+              text: "Handcrafted batches for quality, consistency, and freshness.",
+            },
+
+            support: {
+              title: "Fast support",
+
+              text: "Local customer care and quick responses for every order.",
+            },
+          },
+
+          footer: "© 2026 Mhirsi Miel. Crafted with care in Tunisia.",
+        },
+
+        /* -------------------------------------------------------
+         FRENCH
+         ------------------------------------------------------- */
+
+        fr: {
+          nav: {
+            home: "Accueil",
+            about: "À propos",
+            products: "Produits",
+            contact: "Contact",
+          },
+
+          header: {
+            brand: "Mhirsi Miel",
+
+            title: "Miel pur de Tunisie",
+
+            intro:
+              "Un miel naturel produit en petites quantités, au goût riche et à la présentation premium.",
+          },
+
+          hero: {
+            badge: "Marque de miel moderne",
+
+            title: "Découvrez le miel tunisien premium avec une touche moderne",
+
+            description:
+              "Un miel doré récolté avec soin, produit à Nabeul et destiné aux palais exigeants.",
+
+            shop: "Découvrir nos produits",
+
+            learn: "En savoir plus",
+          },
+
+          metrics: {
+            natural: "Naturel",
+            quality: "Qualité notée",
+            support: "Support rapide",
+          },
+
+          features: {
+            title: "Pourquoi choisir Mhirsi Miel ?",
+
+            natural: {
+              title: "100% Naturel",
+
+              text: "Un miel pur sans additifs, conservateurs ni arômes artificiels.",
+            },
+
+            smallBatch: {
+              title: "Petites quantités",
+
+              text: "Des lots préparés avec soin pour garantir qualité, régularité et fraîcheur.",
+            },
+
+            support: {
+              title: "Support rapide",
+
+              text: "Un service client local et des réponses rapides pour chaque commande.",
+            },
+          },
+
+          footer: "© 2026 Mhirsi Miel. Élaboré avec soin en Tunisie.",
+        },
+
+        /* -------------------------------------------------------
+         ARABIC
+         ------------------------------------------------------- */
+
+        ar: {
+          nav: {
+            home: "الرئيسية",
+            about: "حول",
+            products: "المنتجات",
+            contact: "اتصل بنا",
+          },
+
+          header: {
+            brand: "Mhirsi Miel",
+
+            title: "عسل نقي من تونس",
+
+            intro: "عسل طبيعي يتم إنتاجه بكميات صغيرة، بنكهة غنية وتقديم فاخر.",
+          },
+
+          hero: {
+            badge: "علامة عسل عصرية",
+
+            title: "اكتشف العسل التونسي الفاخر بلمسة عصرية",
+
+            description:
+              "عسل ذهبي يتم جمعه بعناية من نابل، ومصمم ليناسب الأذواق الراقية.",
+
+            shop: "اكتشف مجموعتنا",
+
+            learn: "اعرف المزيد",
+          },
+
+          metrics: {
+            natural: "طبيعي",
+            quality: "جودة عالية",
+            support: "دعم سريع",
+          },
+
+          features: {
+            title: "لماذا تختار Mhirsi Miel؟",
+
+            natural: {
+              title: "100% طبيعي",
+
+              text: "عسل نقي بدون إضافات أو مواد حافظة أو نكهات صناعية.",
+            },
+
+            smallBatch: {
+              title: "إنتاج بكميات صغيرة",
+
+              text: "يتم تحضير العسل بعناية لضمان الجودة والثبات والنضارة.",
+            },
+
+            support: {
+              title: "دعم سريع",
+
+              text: "خدمة عملاء محلية واستجابة سريعة لكل طلب.",
+            },
+          },
+
+          footer: "© 2026 Mhirsi Miel. مصنوع بعناية في تونس.",
+        },
       };
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("scroll-visible");
-            observer.unobserve(entry.target);
+      /* =========================================================
+       DOM ELEMENTS
+       ========================================================= */
+
+      const languageSelect = document.getElementById("language-select");
+
+      const i18nElements = document.querySelectorAll("[data-i18n]");
+
+      /* =========================================================
+       TRANSLATION FUNCTION
+       ========================================================= */
+
+      function translatePage(language) {
+        i18nElements.forEach((element) => {
+          const key = element.dataset.i18n;
+
+          const value = key
+            .split(".")
+            .reduce(
+              (object, property) => object?.[property],
+              translations[language],
+            );
+
+          if (value) {
+            element.textContent = value;
           }
         });
-      }, observerOptions);
 
-      // Observe all animated elements
-      document
-        .querySelectorAll(
-          ".feature-card, .product-card, .section-inner h2, .section-inner p, .about-grid > div, .about-card",
-        )
-        .forEach((el) => {
-          el.classList.add("scroll-hidden");
-          observer.observe(el);
+        /* Update HTML language */
+        document.documentElement.lang = language;
+
+        /* Enable RTL for Arabic */
+        document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+
+        /* Update page title */
+        document.title =
+          language === "fr"
+            ? "Mhirsi Miel - Miel Premium"
+            : language === "ar"
+              ? "Mhirsi Miel - عسل فاخر"
+              : "Mhirsi Miel - Premium Honey";
+      }
+
+      /* =========================================================
+       LANGUAGE SELECT
+       ========================================================= */
+
+
+      /* =========================================================
+       CUSTOM LANGUAGE DROPDOWN
+       ========================================================= */
+
+      const languageDropdown =
+        document.querySelector(".language-dropdown");
+
+      const languageTrigger =
+        document.querySelector(".language-trigger");
+
+      const languageCurrent =
+        document.querySelector(".language-current");
+
+      const languageOptions =
+        document.querySelectorAll(".language-option");
+
+      const languageSelect =
+        document.getElementById("language-select");
+
+      const languageNames = {
+        en: "English",
+        fr: "Français",
+        ar: "العربية",
+      };
+
+      function updateLanguageDropdown(language) {
+        if (!languageCurrent) return;
+
+        languageCurrent.textContent =
+          languageNames[language] || languageNames.en;
+
+        languageOptions.forEach((option) => {
+          const isActive = option.dataset.lang === language;
+
+          option.classList.toggle("active", isActive);
+          option.setAttribute(
+            "aria-selected",
+            String(isActive),
+          );
         });
 
-      // Page Transition
-      function addTransition() {
+        if (languageSelect) {
+          languageSelect.value = language;
+        }
+      }
+
+      if (languageTrigger && languageDropdown) {
+        languageTrigger.addEventListener("click", () => {
+          const isOpen =
+            languageDropdown.classList.toggle("open");
+
+          languageTrigger.setAttribute(
+            "aria-expanded",
+            String(isOpen),
+          );
+        });
+      }
+
+      languageOptions.forEach((option) => {
+        option.addEventListener("click", () => {
+          const language = option.dataset.lang;
+
+          translatePage(language);
+          updateLanguageDropdown(language);
+
+          if (languageDropdown) {
+            languageDropdown.classList.remove("open");
+          }
+
+          if (languageTrigger) {
+            languageTrigger.setAttribute(
+              "aria-expanded",
+              "false",
+            );
+          }
+        });
+      });
+
+      document.addEventListener("click", (event) => {
+        if (
+          languageDropdown &&
+          !languageDropdown.contains(event.target)
+        ) {
+          languageDropdown.classList.remove("open");
+
+          if (languageTrigger) {
+            languageTrigger.setAttribute(
+              "aria-expanded",
+              "false",
+            );
+          }
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (
+          event.key !== "Escape" ||
+          !languageDropdown
+        ) {
+          return;
+        }
+
+        languageDropdown.classList.remove("open");
+
+        if (languageTrigger) {
+          languageTrigger.setAttribute(
+            "aria-expanded",
+            "false",
+          );
+          languageTrigger.focus();
+        }
+      });
+
+      // Default language
+      translatePage("en");
+      updateLanguageDropdown("en");
+
+      /* =========================================================
+       SCROLL ANIMATION
+       ========================================================= */
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+            entry.target.classList.add("scroll-visible");
+
+            observer.unobserve(entry.target);
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        },
+      );
+
+      const animatedElements = document.querySelectorAll(
+        [
+          ".feature-card",
+          ".product-card",
+          ".section-inner h2",
+          ".section-inner p",
+          ".about-grid > div",
+          ".about-card",
+        ].join(", "),
+      );
+
+      animatedElements.forEach((element) => {
+        element.classList.add("scroll-hidden");
+
+        observer.observe(element);
+      });
+
+      /* =========================================================
+       PAGE TRANSITION
+       ========================================================= */
+
+      function addPageTransition() {
         const transition = document.createElement("div");
+
         transition.className = "page-transition";
+
         document.body.appendChild(transition);
       }
 
-      window.addEventListener("beforeunload", addTransition);
+      window.addEventListener("beforeunload", addPageTransition);
 
-      // Fade in on page load
+      /* =========================================================
+       PAGE LOAD
+       ========================================================= */
+
       window.addEventListener("load", () => {
-        document
-          .querySelectorAll(".page-transition")
-          .forEach((el) => el.remove());
+        document.querySelectorAll(".page-transition").forEach((element) => {
+          element.remove();
+        });
       });
     </script>
   </body>
 </html>
+``` Now the homepage will actually translate **all of its visible text** between
+English, French and Arabic, including the navigation, hero, buttons, metrics,
+feature cards and footer. Also, Arabic will automatically switch the entire page
+to **RTL**, while French and English stay **LTR**.

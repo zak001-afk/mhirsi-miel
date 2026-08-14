@@ -145,83 +145,225 @@ select {
 }
 
 .language-switcher {
+  position: relative;
   display: inline-flex;
   align-items: center;
 }
 
+/* Keep the native select for compatibility with the translation system,
+   but hide it from the visual interface. */
 .language-switcher select {
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 0.65rem 1.1rem;
-  background: linear-gradient(
-    135deg,
-    rgba(248, 184, 0, 0.08),
-    rgba(255, 255, 255, 0.03)
-  );
-  color: var(--text);
-  font-weight: 600;
-  cursor: pointer;
-  outline: none;
-  transition: all 0.3s ease;
-  appearance: none;
-  padding-right: 2.2rem;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23f4f6fb' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 0.8rem center;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  opacity: 0;
+  pointer-events: none;
+  border: 0;
 }
 
-.language-switcher select:hover {
-  background: linear-gradient(
-    135deg,
-    rgba(248, 184, 0, 0.14),
-    rgba(255, 255, 255, 0.06)
-  );
+/* =========================================================
+   CUSTOM LANGUAGE DROPDOWN
+   ========================================================= */
+
+.language-dropdown {
+  position: relative;
+}
+
+.language-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+
+  min-width: 135px;
+  padding: 0.65rem 0.95rem 0.65rem 1rem;
+
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(248, 184, 0, 0.10),
+      rgba(255, 255, 255, 0.04)
+    );
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  cursor: pointer;
+  outline: none;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.language-trigger:hover {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(248, 184, 0, 0.16),
+      rgba(255, 255, 255, 0.06)
+    );
+
   border-color: rgba(248, 184, 0, 0.4);
 }
 
-.language-switcher select:focus {
+.language-trigger:focus-visible {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(248, 184, 0, 0.15);
-  background: linear-gradient(
-    135deg,
-    rgba(248, 184, 0, 0.12),
-    rgba(255, 255, 255, 0.05)
-  );
 }
 
-.language-switcher select option {
-  background: var(--surface-strong);
+.language-trigger i {
+  color: var(--accent);
+  font-size: 0.7rem;
+  transition: transform 0.25s ease;
+}
+
+.language-dropdown.open .language-trigger i {
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   DROPDOWN MENU
+   ========================================================= */
+
+.language-menu {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  right: 0;
+  z-index: 100;
+
+  width: 100%;
+  min-width: 135px;
+  padding: 0.4rem;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(22, 29, 44, 0.98),
+      rgba(9, 11, 16, 0.98)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 16px;
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.45),
+    0 0 30px rgba(248, 184, 0, 0.05);
+
+  backdrop-filter: blur(18px);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateY(-8px) scale(0.98);
+  transform-origin: top right;
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+}
+
+.language-dropdown.open .language-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+/* =========================================================
+   LANGUAGE OPTIONS
+   ========================================================= */
+
+.language-option {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+
   color: var(--text);
-  padding: 0.5rem;
-}
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-align: left;
 
-.language-switcher select option:hover {
-  background: var(--accent);
-  color: #111827;
-}
-
-.lang-btn {
-  border: 0;
-  border-radius: 999px;
-  padding: 0.5rem 0.85rem;
   background: transparent;
-  color: var(--muted);
-  font-weight: 600;
+  border: 0;
+  border-radius: 10px;
+
   cursor: pointer;
-  transition: all 0.2s ease;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.lang-btn:hover,
-.lang-btn:focus-visible {
-  color: var(--text);
-  background: rgba(255, 255, 255, 0.08);
+.language-option:hover,
+.language-option:focus-visible {
+  color: var(--accent);
+  background: rgba(248, 184, 0, 0.10);
+  transform: translateX(3px);
   outline: none;
 }
 
-.lang-btn.active {
-  background: var(--accent);
+.language-option.active {
   color: #111827;
-  box-shadow: 0 8px 20px rgba(248, 184, 0, 0.2);
+  background: var(--accent);
+  font-weight: 700;
+}
+
+.language-option.active:hover,
+.language-option.active:focus-visible {
+  color: #111827;
+  background: var(--accent-strong);
+  transform: translateX(0);
+}
+
+/* =========================================================
+   RTL SUPPORT
+   ========================================================= */
+
+html[dir="rtl"] .language-menu {
+  right: auto;
+  left: 0;
+  transform-origin: top left;
+}
+
+html[dir="rtl"] .language-option {
+  text-align: right;
+}
+
+html[dir="rtl"] .language-option:hover,
+html[dir="rtl"] .language-option:focus-visible {
+  transform: translateX(-3px);
+}
+
+html[dir="rtl"] .language-option.active:hover,
+html[dir="rtl"] .language-option.active:focus-visible {
+  transform: translateX(0);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 720px) {
+  .language-trigger,
+  .language-menu {
+    min-width: 125px;
+  }
 }
 
 .hero-section {
@@ -744,4 +886,32 @@ select {
   to {
     transform: rotate(360deg);
   }
+}
+.language-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.lang-btn {
+  background: rgba(248, 184, 0, 0.08);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  background: rgba(248, 184, 0, 0.15);
+  border-color: var(--accent);
+}
+
+.lang-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
 }
